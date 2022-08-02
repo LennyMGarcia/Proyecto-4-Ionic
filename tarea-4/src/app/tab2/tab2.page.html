@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tabla de mult.
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="secondary">
+      <ion-title size="large">Tabla de Mult.</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <p>Aqui coloca un numero y te mostraremos la tabla</p>
+    
+    <ion-item>
+      <ion-label position="floating">Digite el numero: </ion-label>
+      <ion-input [(ngModel)]="numero"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <!-- hace un ciclo for con el numero del indice que se pase y luego se multiplica con i-->
+      <ion-item *ngFor='let index of counter(15) ;let i=index'>
+        {{numero}} x {{i}} = {{numero * i}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>
